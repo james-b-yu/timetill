@@ -1,0 +1,424 @@
+/*
+:root {
+    --colour-1: black;
+    --colour-2: white;
+    --colour-disabled: grey;
+
+    --colour-rich: #001F3F;
+    --colour-shallow: #0074D9;
+    --colour-light: #7FDBFF;
+    --colour-natural: #01FF70;
+    --colour-peace: #39CCCC;
+
+    --colour-error: #F012BE;
+    --colour-danger: #85144B;
+    --colour-warn: #FFDC00;
+}
+*/
+:root {
+    --colour-1: transparent;
+    --colour-2: transparent;
+    --colour-disabled: transparent;
+
+    --colour-rich: transparent;
+    --colour-shallow: transparent;
+    --colour-light: transparent;
+    --colour-natural: transparent;
+    --colour-peace: transparent;
+
+    --colour-error: transparent;
+    --colour-danger: transparent;
+    --colour-warn: transparent;
+}
+
+
+@font-face {
+    font-family: "Baskerville";
+    src: url("../fonts/baskerville/BaskervilleURW-BolObl.ttf") format("truetype");
+
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Baskerville";
+    src: url("../fonts/baskerville/BaskervilleURW-Bol.ttf") format("truetype");
+
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Baskerville";
+    src: url("../fonts/baskerville/BaskervilleURW-ExtBolObl.ttf") format("truetype");
+
+    font-weight: bolder;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Baskerville";
+    src: url("../fonts/baskerville/BaskervilleURW-ExtBol.ttf") format("truetype");
+
+    font-weight: bolder;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Baskerville";
+    src: url("../fonts/baskerville/BaskervilleURW-MedObl.ttf") format("truetype");
+
+    font-weight: 400;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Baskerville";
+    src: url("../fonts/baskerville/BaskervilleURW-Med.ttf") format("truetype");
+
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Baskerville";
+    src: url("../fonts/baskerville/BaskervilleURW-RegIta.ttf") format("truetype");
+
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Baskerville";
+    src: url("../fonts/baskerville/BaskervilleURW-Reg.ttf") format("truetype");
+
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Baskerville";
+    src: url("../fonts/baskerville/BaskervilleURW-UltBolObl.ttf") format("truetype");
+
+    font-weight: 900;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Baskerville";
+    src: url("../fonts/baskerville/BaskervilleURW-UltBol.ttf") format("truetype");
+
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Mrs. Eaves All Petite Caps";
+    src: url("../fonts/mrs-eaves/MrsEavesAllPetiteCapsOT.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Mrs. Eaves Petite Caps";
+    src: url("../fonts/mrs-eaves/MrsEavesPetiteCapsOT.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Mrs. Eaves All Small Caps";
+    src: url("../fonts/mrs-eaves/MrsEavesAllSmallCapsOT.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Mrs. Eaves Small Caps";
+    src: url("../fonts/mrs-eaves/MrsEavesSmallCapsOT.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Mrs. Eaves";
+    src: url("../fonts/mrs-eaves/MrsEavesOT-Roman.ttf") format("truetype");
+
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Mrs. Eaves";
+    src: url("../fonts/mrs-eaves/MrsEavesOT-Italic.ttf") format("truetype");
+
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Mrs. Eaves";
+    src: url("../fonts/mrs-eaves/MrsEavesOT-Bold.ttf") format("truetype");
+
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Mrs. Eaves";
+    src: url("../fonts/mrs-eaves/MrsEavesOT-BoldItalic.ttf") format("truetype");
+
+    font-weight: bold;
+    font-style: italic;
+}
+
+body {
+    position: fixed;
+    top: 34px;
+    background-color: var(--colour-1);
+
+    color: var(--colour-2);
+}
+
+* {
+    transition: all 100ms 0ms ease-out;
+    transition-delay: 0ms;
+
+    font-family: "Baskerville";
+    font-variant-ligatures: discretionary-ligatures;
+    font-feature-settings: "liga", "clig", "dlig", "salt", "lnum", "tnum";
+
+     /* font-family: "Mrs. Eaves"; */
+
+    padding: 0;
+    margin: 0;
+
+    user-select: none;
+}
+
+*:not(input):hover {
+    cursor: default;
+}
+
+*::selection {
+    color: var(--colour-rich);
+    background-color: var(--colour-warn);
+    opacity: 1;
+}
+
+.wrapper {
+    position: fixed;
+
+    top: 34px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    background-color: var(--colour-1);
+
+    color: var(--colour-2);
+
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+input, button {
+    border: none;
+    outline: none;
+
+    font-weight: normal;
+}
+
+input[type="button"], button {
+    background-color: var(--colour-2);
+    color: var(--colour-1);
+
+    border: none;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+input[type="button"]:hover, button:hover {
+    color: var(--colour-2);
+    background-color: var(--colour-1);
+
+    cursor: pointer;
+    box-shadow: var(--colour-2) 0px 0px 0px 2px inset;
+}
+
+input[type="button"]:active, button:active {
+    box-shadow: var(--colour-2) 0px 0px 0px 8px inset;
+}
+
+
+input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+.set {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+    width: 5em;
+
+    font-size: 2.25em;
+}
+
+.set input {
+    transition-timing-function: ease-out;
+    transition: color, background-color, box-shadow;
+    transition-duration: 125ms;
+
+    font-size: 1em;
+
+    color: var(--colour-2);
+    background-color: var(--colour-1);
+
+    padding: 0.2em;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.set input:not(#label-input):not(#date-input-year) {
+    width: 1em;
+    min-width: 1em;
+    max-width: 1em;
+
+    text-align: right;
+}
+
+.set input#date-input-year {
+    text-align: right;
+}
+
+#date-input-year {
+    width: 2em;
+    min-width: 2em;
+    max-width: 2em;
+}
+
+.set input:hover {
+    color: var(--colour-1);
+    background-color: var(--colour-2);
+}
+
+.set input:focus {
+    color: var(--colour-2);
+    background-color: var(--colour-1);
+
+    box-shadow: var(--colour-2) 0px 0px 0px 4px inset;
+}
+
+#timer-label-width-test {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+
+    visibility: hidden;
+    height: auto;
+    width: auto;
+    white-space: nowrap;
+
+    font-size: 2.25em;
+}
+
+.create-new-button {
+    width: 48px;
+    height: 48px;
+    margin: 0.9em;
+
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+
+    transition: all 100ms 0ms ease-out;
+}
+
+.create-new-button[disabled] {
+    pointer-events: none;
+    background-color: var(--colour-1);
+    color: var(--colour-disabled);
+}
+
+.create-new-button > span {
+    color: var(--colour-1);
+}
+
+.create-new-button > *:hover {
+    cursor: pointer;
+}
+
+.create-new-button:hover > span {
+    color: var(--colour-2);
+}
+
+.create-new-button > .plus {
+    color: var(--colour-shallow);
+}
+
+.create-new-button:hover > .plus {
+    color: var(--colour-2);
+}
+
+.create-new-button:active > .plus {
+    color: var(--colour-light);
+}
+
+.plus {
+    font-size: 2em;
+
+    font-weight: bold;
+    color: var(--colour-light);
+
+    width: 50px;
+}
+
+#validation-message {
+    margin: 0.25em;
+    padding: 0.25em;
+
+    transition: all 250ms 0ms ease-out;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+
+    white-space: nowrap;
+}
+
+#validation-message.plain {
+    background-color: var(--colour-1);
+    color: var(--colour-2);
+
+    width: 230px;
+}
+
+#validation-message.valid {
+    background-color: var(--colour-peace);
+    color: var(--colour-rich);
+
+    width: 105px;
+}
+
+#validation-message.invalid {
+    background-color: var(--colour-error);
+    color: var(--colour-danger);
+
+    width: 150px;
+}
+
+#validation-message.warning {
+    background-color: var(--colour-warn);
+    color: var(--colour-rich);
+
+    width: 180px;
+}
+
+#label-input {
+    transition-timing-function: ease-out;
+    transition: color, background-color, width, box-shadow;
+    transition-duration: 125ms;
+    width: 20px;
+
+    text-align: center;
+}

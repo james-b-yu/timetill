@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=800, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="../styles/ribbon.css" type="text/css">
+    <link rel="stylesheet" href="../styles/main.css" type="text/css">
+    <link rel="stylesheet" href="../styles/timer.css" type="text/css">
+
+    <title>App!</title>
+</head>
+<body>
+    <div class="ribbon">
+        <div id="exit-button"><div id="exit-button-graphic"></div></div>
+        <div id="reload-button"><div id="reload-button-graphic"></div></div>
+
+        <div id="drag-app">TIME TILL</div>
+
+        <div id="minimise-button"><div id="minimise-button-graphic"></div></div>
+        <div id="maximise-button"><div id="maximise-button-graphic"></div></div>
+    </div>
+
+    <div class="" id="current-time-display">by James Yu</div>
+
+    <!-- main body -->
+
+    <div class="wrapper" id="wrapper">
+
+        <!--<div class="timer" data-label="LABEL">
+            <div class="container">
+                <div class="value-row">
+                    <div class="value-container">
+                        <div class="value">
+                            02
+                        </div>
+                        <button class="value-text" type="button">
+                            YEARS
+                        </button>
+                    </div>
+                    <div class="value-container">
+                        <div class="value">
+                            10
+                        </div>
+                        <button class="value-text" type="button">
+                            MONTHS
+                        </button>
+                    </div>
+                    <div class="value-container">
+                        <div class="value">
+                            05
+                        </div>
+                        <button class="value-text" type="button">
+                            DAYS
+                        </button>
+                    </div>
+                </div>
+                <div class="value-row">
+                    <div class="value-container">
+                        <div class="value">
+                            20
+                        </div>
+                        <button class="value-text" type="button">
+                            HOURS
+                        </button>
+                    </div>
+                    <div class="value-container">
+                        <div class="value">
+                            30
+                        </div>
+                        <button class="value-text" type="button">
+                            MINUTES
+                        </button>
+                    </div>
+                    <div class="value-container">
+                        <div class="value">
+                            07
+                        </div>
+                        <button class="value-text" type="button">
+                            SECONDS
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="time-till-display" data-seton="01.02.2003 01:02:03">
+                <span data-ba="TILL" class="date-time-till">DD.MM.YYYY</span>
+                <span class="time-time-till">HH:mm:ss</span>
+            </div>
+        </div> -->
+
+        <button type="button" name="create-new" id="create-new-button" class="create-new-button overlay small">
+            <span class="plus">
+                +
+            </span>
+            <span>
+                Create a new countdown timer...
+            </span>
+        </button>
+
+        <div class="controls">
+            <button type="button" name="change-theme" id="change-theme" class="change-theme overlay small show-when-mouse-moved">
+                <span class="equals" style="font-weight: normal;">
+                    =
+                </span>
+                <span>
+                    Change the theme...
+                </span>
+            </button>
+
+            <button type="button" name="toggle-on-top" id="toggle-on-top" class="toggle-on-top overlay small show-when-mouse-moved">
+                <span class="equals" style="font-weight: normal;">
+                    !
+                </span>
+                <span>
+                    Keep window on top...
+                </span>
+            </button>
+        </div>
+
+
+        <div id="dragger" style="flex-direction:row; align-items: center; justify-content: center; background-color: var(--colour-1); color: var(--colour-2); opacity: 1; width: 100%; display: none; font-size: 0.75em; position: fixed; top: 0; text-align: center; z-index: 100; -webkit-app-region: drag; font-weight: regular; font-style: italic">
+            Drag to move or snap the window.
+        </div>
+
+        <div id="info" style="background-color: var(--colour-1); color: var(--colour-2); opacity: 1; width: 100%; display: none; font-size: 0.75em; position: fixed; top: 0; text-align: center; font-weight: regular; font-style: italic">
+            Drag whilst holding control to move the window.
+        </div>
+    </div>
+
+
+    <script src="../scripts/index.js" charset="utf-8"></script>
+    <script src="../scripts/ribbon.js" charset="utf-8"></script>
+    <script src="../scripts/timer.js" charset="utf-8"></script>
+</body>
+</html>

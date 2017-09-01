@@ -1,0 +1,1 @@
+electron-packager . "Time Till" --overwrite --asar=true --all --icon=icon.png --prune=true --out=dist --win32metadata.CompanyName="FierceDeity Productions" --win32metadata.FileDescription="A beautiful count- down and up timer" --win32metadata.OriginalFilename="Time Till.exe" --win32metadata.ProductName="Time Till" --win32metadata.InternalName="timetill.exe"

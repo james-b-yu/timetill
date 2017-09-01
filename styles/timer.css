@@ -1,0 +1,231 @@
+/*
+:root {
+    --colour-1: black;
+    --colour-2: white;
+    --colour-disabled: grey;
+
+    --colour-rich: #001F3F;
+    --colour-shallow: #0074D9;
+    --colour-light: #7FDBFF;
+    --colour-natural: #01FF70;
+    --colour-peace: #39CCCC;
+
+    --colour-error: #F012BE;
+    --colour-danger: #85144B;
+    --colour-warn: #FFDC00;
+}
+*/
+:root {
+    --colour-1: transparent;
+    --colour-2: transparent;
+    --colour-disabled: transparent;
+
+    --colour-rich: transparent;
+    --colour-shallow: transparent;
+    --colour-light: transparent;
+    --colour-natural: transparent;
+    --colour-peace: transparent;
+
+    --colour-error: transparent;
+    --colour-danger: transparent;
+    --colour-warn: transparent;
+}
+
+
+ /* style timer div */
+.timer {
+    width: 70%;
+    height: 160px;
+
+    background-color: var(--colour-1);
+    position: relative;
+
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: space-between;
+
+    overflow: hidden;
+
+    padding-top: 1em;
+
+    transition: all 250ms 0ms ease-out, background-color 100ms 0ms ease-out, color 100ms 0ms ease-out;
+}
+
+.timer::before {
+    position: absolute;
+    top: 0;
+
+    content: attr(data-label);
+    color: var(--colour-2);
+
+    width: 100%;
+    text-align: center;
+
+    font-weight: 400;
+}
+
+.timer.hidden {
+    opacity: 0;
+    height: 0;
+    margin: 0;
+    padding: 0;
+}
+
+ /* style container div */
+.container {
+    flex-grow: 3;
+    background-color: var(--colour-1);
+
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
+
+    margin-right: 5em;
+}
+
+.value-row {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: space-between;
+
+    flex-grow: 1;
+
+    transition-duration: 100ms;
+}
+
+.value-container {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
+
+    transition-duration: 100ms;
+
+    color: var(--colour-2);
+
+    width: 5em;
+
+    flex-grow: 1;
+}
+
+.value {
+    font-size: 2.25em;
+    color: var(--colour-2);
+
+    text-align: center;
+    font-weight: regular;
+}
+
+.value-text {
+    font-family: "Mrs. Eaves";
+}
+
+.value:hover {
+    cursor: default;
+}
+
+.time-till-display {
+    position: relative;
+    display: flex;
+
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
+}
+
+.time-till-display:hover {
+    cursor: default;
+}
+
+.date-time-till, .time-time-till, .day-of-week-time-till {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
+
+    text-align: center;
+
+    font-size: 1.5em;
+    position: relative;
+
+    color: var(--colour-2);
+}
+
+.day-of-week-time-till {
+    color: var(--colour-2);
+
+    font-family: "Mrs. Eaves All Petite Caps";
+
+    margin-top: -6px
+}
+
+.time-till-display::before {
+    content: "TIME " attr(data-ba);
+    color: var(--colour-2);
+
+    font-family: "Mrs. Eaves All Petite Caps";
+    font-size: 1.5em;
+
+    position: absolute;
+    top: 12px;
+
+    width: 100%;
+    text-align: center
+}
+
+.time-till-display::after {
+    content: "SET ON " attr(data-seton);
+    color: var(--colour-2);
+
+    font-size: 0.5em;
+
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+
+    text-align: center;
+
+    font-family: "Mrs. Eaves All Petite Caps";
+}
+
+.close {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: absolute;
+    width: 32px;
+    height: 32px;
+
+    top: 0;
+    right: 0;
+}
+
+.close:hover {
+    box-shadow: 0px 0px 0px 2px var(--colour-2) inset;
+
+    cursor: pointer;
+}
+
+.close:active {
+    box-shadow: 0px 0px 0px 4px var(--colour-2) inset;
+    background-color: var(--colour-error);
+}
+
+.close-button-graphic {
+    width: 8px;
+    height: 8px;
+
+    background-color: var(--colour-shallow);
+}
+
+.close:hover > .close-button-graphic {
+    background-color: var(--colour-2);
+}
+
+.close:active > .close-button-graphic {
+    background-color: var(--colour-rich);
+}
