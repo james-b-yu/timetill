@@ -6,6 +6,57 @@
 }
 
 
+/* define fonts */
+
+@font-face {
+    font-family: "Baskerville 120 Pro";
+    src: url("../fonts/Baskerville120Pro.otf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Baskerville 120 Pro";
+    src: url("../fonts/Baskerville120Pro-Bold.otf") format("opentype");
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: "Baskerville 120 Pro";
+    src: url("../fonts/Baskerville120Pro-BoldItalic.otf") format("opentype");
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Baskerville 120 Pro";
+    src: url("../fonts/Baskerville120Pro-Italic.otf") format("opentype");
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Didot LT Std";
+    src: url("../fonts/DidotLTStd-Roman.otf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Didot LT Std";
+    src: url("../fonts/DidotLTStd-Bold.otf") format("opentype");
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Didot LT Std";
+    src: url("../fonts/DidotLTStd-Italic.otf") format("opentype");
+    font-weight: normal;
+    font-style: italic;
+}
+
+
 /*Default to all elements having no space around them*/
 
 * {
