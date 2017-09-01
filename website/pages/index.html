@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1080, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Time Till</title>
+    <!-- Include library scripts -->
+    <!-- Not using React -->
+    <!-- <script src="../libraries/react-with-addons.js"></script> -->
+    <!-- <script src="../libraries/react-dom.js"></script> -->
+    <!-- ZenScroll -->
+    <script src="../libraries/zenscroll.js"></script>
+    <link type="text/css" rel="stylesheet" href="../styles/style.css" />
+    <link rel="icon" type="image/png" href="../images/icon.png">
+</head>
+
+<body>
+
+    <div class="nav-bar hide-when-small">
+        <a scroll-to="#top" class="nav-link" style="flex-grow: 0; order: 6">↑</a>
+        <a scroll-to="#beauty" class="nav-link">Beauty</a>
+        <a scroll-to="#timers" class="nav-link">Timers</a>
+        <a scroll-to="#from-to" class="nav-link">From and To</a>
+        <a scroll-to="#validation" class="nav-link">Validation</a>
+        <a scroll-to="#attention" class="nav-link">Attention Mode</a>
+        <a scroll-to="#themes" class="nav-link">Themes</a>
+        <a scroll-to="#download" class="nav-link">Download</a>
+    </div>
+
+    <!-- CONTENTS -->
+    <div class="wrapper">
+        <div id="top" class="screen" style="background-image: url('../images/bg-top.jpeg');">
+            <div class="screen-contents">
+                <h1 style="font-size: 4em">Time Till</h1>
+            </div>
+            <div class="screen-contents join">
+                <em>Time Till is <b>the</b> modern timer.</em>
+            </div>
+        </div>
+        <div id="beauty" class="screen" style="background-image: url('../images/bg-beauty.jpeg');">
+            <div class="screen-contents">
+                <h1>Beautiful Timekeeping</h1>
+            </div>
+            <div class="screen-contents thin">
+                <em>Timekeeping has never been easier without this flat, minimalistic design.</em>
+            </div>
+            <div class="screen-contents" style="overflow: hidden">
+                <img src="../images/time-till-start.png" alt="">
+                <img src="../images/time-till-demo-1.png" alt="" />
+            </div>
+        </div>
+        <div id="timers" class="screen" style="background-image: url('../images/time-till-multiple-timers.png');">
+            <div class="screen-contents">
+                <h1>Multiple Timers</h1>
+            </div>
+            <div class="screen-contents thin">
+                <em>Have as many timers as you want. Time Till saves them all.</em>
+            </div>
+        </div>
+        <div id="from-to" class="screen" style="background-image: url('../images/bg-count-up-down.jpeg');">
+            <div class="screen-contents">
+                <h1>Count Up and Down</h1>
+            </div>
+            <div class="screen-contents thin">
+                <em>Time Till shows times till and since dates, giving you full awareness of elapsed periods.</em>
+            </div>
+            <div class="screen-contents start-thin">
+                <em>These timers show the lengths of time between now and the next and previous Christmases.</em>
+            </div>
+            <div class="screen-contents join" style="overflow: hidden">
+                <img src="../images/time-till-count-down.png" alt="" />
+                <img src="../images/time-till-count-up.png" alt="" />
+            </div>
+        </div>
+        <div id="validation" class="screen" style="background-image: url('../images/bg-validation.jpeg');">
+            <div class="screen-contents">
+                <h1>Date Validation</h1>
+            </div>
+            <div class="screen-contents thin">
+                <em>Time Till validates your dates for you, so you don't have to.</em>
+            </div>
+            <div class="screen-contents">
+                <p style="max-width: 150px">Here is an example of an invalid date -- Time Till cautiously notifies the user.</p>
+                <img src="../images/time-till-invalid-date.png" alt="">
+                <p style="max-width: 150px">Time Till supports counting up from a time in the past, but just in case, it warns you.</p>
+                <img src="../images/time-till-date-in-past.png" alt="">
+            </div>
+        </div>
+        <div id="attention" class="screen" style="background-image: url('../images/time-till-attention.png');">
+            <div class="screen-contents">
+                <h1>Attention Mode</h1>
+            </div>
+            <div class="screen-contents thin">
+                <em>In Attention Mode, Time Till condenses and floats above all other windows.</em>
+            </div>
+        </div>
+        <div id="themes" class="screen" style="background-image: url('../images/bg-themes.jpeg');">
+            <div class="screen-contents">
+                <h1>Themes</h1>
+            </div>
+            <div class="screen-contents thin">
+                <em>Tired of the same colours? Select from a list of 5 themes to suit your mood!</em>
+            </div>
+            <div class="screen-contents themes-show" style="overflow-x: hidden; position: relative">
+                <img style="margin-right: -150px; position: relative; left: -75px" src="../images/time-till-theme-1.png" alt="" />
+                <img style="margin-right: -150px; position: relative; left: -75px" src="../images/time-till-theme-2.png" alt="" />
+                <img style="margin-right: -150px; position: relative; left: -75px" src="../images/time-till-theme-3.png" alt="" />
+                <img style="margin-right: -150px; position: relative; left: -75px" src="../images/time-till-theme-4.png" alt="" />
+                <img style="margin-right: -150px; position: relative; left: -75px" src="../images/time-till-theme-5.png" alt="" />
+            </div>
+        </div>
+        <div id="download" class="screen" style="background-image: url('../images/pexels-photo-113850.jpeg')">
+            <div class="screen-contents">
+                <h1>Download Time Till</h1>
+            </div>
+            <div class="screen-contents join thin hide-when-small">
+                <em>Platform</em>
+            </div>
+            <div class="screen-contents join end-thin hide-when-small" style="justify-content: flex-start">
+                <div class="picker" onupdate="update">
+                    <button class="expand">→</button>
+                    <button data-value="win32">Windows</button>
+                    <button data-value="linux">Linux</button>
+                    <button data-value="src">Source Code</button>
+                </div>
+            </div>
+            <div class="screen-contents join thin hide-when-small">
+                <em>Architecture</em>
+            </div>
+            <div class="screen-contents join join thin hide-when-small" style="justify-content: flex-start">
+                <div class="picker" onupdate="update">
+                    <button class="expand">→</button>
+                    <button data-value="x86_64">64-Bit</button>
+                    <button data-value="x86">32-Bit</button>
+                    <button data-value="armv7l" class="arm" style="display: none">ARM 32-Bit</button>
+                    <button data-value="" class="no-data" style="display: none"></button>
+                </div>
+            </div>
+            <div class="screen-contents join hide-when-small">
+                <a href="#" class="download"><b>download</b></a>
+            </div>
+
+            <div class="screen-contents join thin hide-when-large">
+                <p>Choose your Download</p>
+            </div>
+            <div class="screen-contents join hide-when-large download-list">
+                <a href="https://github.com/fiercedeityproductions/timetill/raw/master/dist/time-till-linux-armv7l.zip">
+                    Linux armv7l
+                </a>
+                <a href="https://github.com/fiercedeityproductions/timetill/raw/master/dist/time-till-linux-x86_64.zip">
+                    Linux x84_64
+                </a>
+                <a href="https://github.com/fiercedeityproductions/timetill/raw/master/dist/time-till-linux-x86.zip">
+                    Linux x86
+                </a>
+                <a href="https://github.com/fiercedeityproductions/timetill/raw/master/dist/time-till-win32-x86_64.zip">
+                    Windows x84_64
+                </a>
+                <a href="https://github.com/fiercedeityproductions/timetill/raw/master/dist/time-till-win32-x86.zip">
+                    Windows x86
+                </a>
+                <a href="https://github.com/fiercedeityproductions/timetill/raw/master/dist/time-till-src.zip">
+                    Source Code
+                </a>
+            </div>
+            <div class="screen-contents join">
+                <p style="font-size: 0.5em; display: flex; align-items: center; justify-content: center"><a href="https://github.com/fiercedeityproductions/timetill">View this project on GitHub.</a></p>
+                <p style="font-size: 0.5em; display: flex; align-items: center; justify-content: center">TimeTill was created by James Yu in mid-2017. Images are from Wikipedia and Pexels.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Include site scripts -->
+    <script src="../scripts/index.js"></script>
+</body>
+
+</html>
