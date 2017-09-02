@@ -411,6 +411,38 @@ h1 {
     display: none;
 }
 
+.link-list {
+    padding-top: 25px !important;
+}
+
+.link-list>a {
+    width: 75%;
+    margin: 0 !important;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 2px 0px !important;
+    background-color: var(--dark) !important;
+    color: var(--light) !important;
+    -webkit-transition: all 75ms 0ms ease-out;
+    transition: all 75ms 0ms ease-out;
+}
+
+.link-list>a:not(:last-of-type) {
+    border-bottom: solid 0.5px var(--light);
+}
+
+.link-list>a:hover {
+    color: var(--dark) !important;
+    background-color: var(--light) !important;
+}
+
+.link-list>a:active {
+    color: var(--dark-accent) !important;
+    background-color: var(--light-accent) !important;
+}
+
 @media all and (max-width: 800px) {
     .hide-when-large {
         display: -webkit-box;
@@ -444,27 +476,5 @@ h1 {
         -webkit-box-flex: 1 !important;
         -ms-flex-positive: 1 !important;
         flex-grow: 1 !important;
-    }
-    .download-list {
-        padding-top: 25px !important;
-    }
-    .download-list>a {
-        width: 75%;
-        padding: 2px 0px !important;
-        background-color: var(--dark) !important;
-        color: var(--light) !important;
-        -webkit-transition: all 75ms 0ms ease-out;
-        transition: all 75ms 0ms ease-out;
-    }
-    .download-list>a:not(:last-of-type) {
-        border-bottom: solid 0.5px var(--light);
-    }
-    .download-list>a:hover {
-        color: var(--dark) !important;
-        background-color: var(--light) !important;
-    }
-    .download-list>a:active {
-        color: var(--dark-accent) !important;
-        background-color: var(--light-accent) !important;
     }
 }
