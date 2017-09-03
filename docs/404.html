@@ -6,24 +6,37 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <title>404!</title>
-    <link type="text/css" rel="stylesheet" href="./styles/style.css" />
-    <link rel="icon" type="image/png" href="./images/icon.png">
+    <link type="text/css" rel="stylesheet" href="https://fiercedeity-productions.github.io/timetill/styles/style.css" />
+    <link rel="icon" type="image/png" href="https://fiercedeity-productions.github.io/timetill/images/icon.png">
+
+    <!-- if an older version of ie, redirect to get-better-browser.html -->
+    <!--[if IE]>
+        <meta http-equiv="refresh" content="0; url=https://fiercedeity-productions.github.io/timetill/get-better-browser.html">
+    <![endif]-->
 </head>
 
 <!-- 404 PAGE -->
 
 <body>
     <div class="wrapper">
-        <div class="screen" style="background-image: url('./images/bg-compass.jpeg')">
+        <div class="screen" style="background-image: url('https://fiercedeity-productions.github.io/timetill/images/bg-compass.jpeg')">
             <div class="screen-contents">
                 <h1 style="font-size: 4em">404!</h1>
             </div>
             <div class="screen-contents link-list" style="flex-direction: column; align-items: center">
-                <a href="./index.html">View the website.</a>
+                <a href="https://fiercedeity-productions.github.io/timetill/index.html">View the website.</a>
                 <a href="https://github.com/fiercedeity-productions/timetill">View this project on GitHub.</a>
             </div>
         </div>
     </div>
+
+    <!-- redirect if new version of ie or edge -->
+    <script>
+        // sniff out whether the browser is ie or edge and if so, redirect to get-better-browser.html
+        if ( /*@cc_on!@*/ false || !!document.documentMode || !!window.StyleMedia) {
+            window.location = "https://fiercedeity-productions.github.io/timetill/get-better-browser.html";
+        }
+    </script>
 </body>
 
 </html>
