@@ -42,7 +42,7 @@
     <div class="wrapper">
         <div id="top" class="screen" style="background-image: url('./images/bg-top.jpeg');">
             <div class="screen-contents">
-                <h1 style="font-size: 4em">Time Till</h1>
+                <h1 id="title" style="font-size: 4em">Time Till</h1>
             </div>
             <div class="screen-contents join">
                 <em>Time Till is <b>the</b> modern timer.</em>
@@ -206,6 +206,8 @@
 
             // if browser version is less than supported version, redirect
             if (version < supportedBrowserVersions[browser]) window.location = "./get-better-browser.html";
+
+            document.getElementById("title").innerHTML = browser + version;
         } catch (e) {
             window.location = "./get-better-browser.html";
         }
