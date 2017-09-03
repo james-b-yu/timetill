@@ -9,6 +9,11 @@
     <link type="text/css" rel="stylesheet" href="https://fiercedeity-productions.github.io/timetill/styles/style.css" />
     <link rel="icon" type="image/png" href="https://fiercedeity-productions.github.io/timetill/images/icon.png">
 
+    <!-- redirect if no javascript -->
+    <noscript>
+        <meta http-equiv="refresh" content="0; url=https://fiercedeity-productions.github.io/timetill/js-disabled.html">
+    </noscript>
+
     <!-- if an older version of ie, redirect to get-better-browser.html -->
     <!--[if IE]>
         <meta http-equiv="refresh" content="0; url=https://fiercedeity-productions.github.io/timetill/get-better-browser.html">
@@ -18,6 +23,34 @@
 <!-- 404 PAGE -->
 
 <body>
+    <!-- redirect if bad browser -->
+    <script>
+        // sniff out whether the browser is ie or edge and if so, redirect to get-better-browser.html
+        if ( /*@cc_on!@*/ false || !!document.documentMode || !!window.StyleMedia) window.location =
+            "https://fiercedeity-productions.github.io/timetill/get-better-browser.html";
+
+        // sniff out stuff for other browsers, must use old js
+        try {
+            var browser = (navigator.userAgent.match(/Chrome/) || navigator.userAgent.match(/Safari/) || navigator.userAgent
+                .match(/Opera/) || navigator.userAgent.match(/Firefox/))[0]
+
+            var version = parseInt(navigator.userAgent.match(new RegExp("(?:" + browser + "\/)([0-9]+)"))[1])
+
+            var supportedBrowserVersions = {
+                "Chrome": 58,
+                "Safari": 603,
+                "Firefox": 54,
+                "Opera": 46
+            }
+
+            // if browser version is less than supported version, redirect
+            if (version < supportedBrowserVersions[browser]) window.location =
+                "https://fiercedeity-productions.github.io/timetill/get-better-browser.html";
+        } catch (e) {
+            window.location = "https://fiercedeity-productions.github.io/timetill/get-better-browser.html";
+        }
+    </script>
+
     <div class="wrapper">
         <div class="screen" style="background-image: url('https://fiercedeity-productions.github.io/timetill/images/bg-compass.jpeg')">
             <div class="screen-contents">
