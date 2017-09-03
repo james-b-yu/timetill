@@ -187,7 +187,26 @@
     <!-- redirect if new version of ie or edge -->
     <script>
         // sniff out whether the browser is ie or edge and if so, redirect to get-better-browser.html
-        if ( /*@cc_on!@*/ false || !!document.documentMode || !!window.StyleMedia) {
+        if ( /*@cc_on!@*/ false || !!document.documentMode || !!window.StyleMedia) window.location =
+            "./get-better-browser.html";
+
+        // sniff out stuff for other browsers, must use old js
+        try {
+            var browser = (navigator.userAgent.match(/Chrome/) || navigator.userAgent.match(/Safari/) || navigator.userAgent
+                .match(/Opera/) || navigator.userAgent.match(/Firefox/))[0]
+
+            var version = parseInt(navigator.userAgent.match(new RegExp("(?:" + browser + "\/)([0-9]+)"))[1])
+
+            var supportedBrowserVersions = {
+                "Chrome": 49,
+                "Safari": 601,
+                "Firefox": 52,
+                "Opera": 46
+            }
+
+            // if browser version is less than supported version, redirect
+            if (version < supportedBrowserVersions[browser]) window.location = "./get-better-browser.html";
+        } catch (e) {
             window.location = "./get-better-browser.html";
         }
     </script>
