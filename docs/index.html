@@ -3,7 +3,6 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=1080, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Time Till</title>
     <!-- Include library scripts -->
@@ -14,6 +13,16 @@
     <script src="./libraries/zenscroll.js"></script>
     <link type="text/css" rel="stylesheet" href="./styles/style.css" />
     <link rel="icon" type="image/png" href="./images/icon.png">
+
+    <!-- If javascript is disabled, go to js-disabled.html -->
+    <noscript>
+        <meta http-equiv="refresh" content="0; url=./js-disabled.html">
+    </noscript>
+
+    <!-- if an older version of ie, redirect to get-better-browser.html -->
+    <!--[if IE]>
+        <meta http-equiv="refresh" content="0; url=./get-better-browser.html">
+    <![endif]-->
 </head>
 
 <body>
@@ -174,6 +183,15 @@
 
     <!-- Include site scripts -->
     <script src="./scripts/index.js"></script>
+
+    <!-- redirect if new version of ie or edge -->
+    <script>
+        // sniff out whether the browser is ie or edge and if so, redirect to get-better-browser.html
+        if ( /*@cc_on!@*/ false || !!document.documentMode || !!window.StyleMedia) {
+            window.location = "./get-better-browser.html";
+        }
+    </script>
+
 </body>
 
 </html>
