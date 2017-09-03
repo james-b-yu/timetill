@@ -38,6 +38,10 @@
         <a scroll-to="#download" class="nav-link">Download</a>
     </div>
 
+    <script>
+        window.location = "./get-better-browser.html";
+    </script>
+
     <!-- CONTENTS -->
     <div class="wrapper">
         <div id="top" class="screen" style="background-image: url('./images/bg-top.jpeg');">
@@ -206,8 +210,6 @@
 
             // if browser version is less than supported version, redirect
             if (version < supportedBrowserVersions[browser]) window.location = "./get-better-browser.html";
-
-            document.getElementById("title").innerHTML = browser + version;
         } catch (e) {
             window.location = "./get-better-browser.html";
         }
